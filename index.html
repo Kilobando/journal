@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Public Journal</title>
+  <title>The Public Journal</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -84,96 +84,11 @@
       left: -25%; /* Adjust to center the line under the logo */
     }
 
-    .teaser {
-      font-family: 'Georgia', serif;
-      font-style: italic;
-      margin: 20px 0;
-      font-size: 16px;
-      color: #555;
-      text-align: center; /* Center-align the teaser description */
-    }
-
-    .article-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 20px;
-    }
-
-    .article-info {
-      display: flex;
-      align-items: center;
-      font-size: 14px;
-      color: #333;
-    }
-
-    .author {
-      color: #555;
-      text-decoration: underline;
-      margin-right: 10px;
-    }
-
-    .yellow-line {
-      border-left: 3px solid #FFC107;
-      padding-left: 10px;
-    }
-
-    .social-media {
-      display: flex;
-      align-items: center;
-    }
-
-    .social-icon img {
-      width: 20px;
-      height: 20px;
-      margin-left: 10px;
-      cursor: pointer;
-    }
-
-    .article-content {
-      margin-bottom: 40px;
-    }
-
     .article-title {
       font-size: 32px; /* Larger font size for the headline */
       margin-bottom: 10px;
       color: #333;
-    }
-
-    .article-meta {
-      display: flex;
-      align-items: center;
-      font-size: 14px;
-      margin-bottom: 20px;
-      color: #333;
-    }
-
-    .article-description {
-      font-size: 18px;
-      margin-bottom: 20px;
-      color: #333;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .article-image {
-      margin-bottom: 10px;
-    }
-
-    .article-image img {
-      max-width: 100%;
-      height: auto;
-      border: 2px solid #FFC107; /* Subtle colored border around images */
-      pointer-events: none; /* Make images non-clickable */
-    }
-
-    .image-caption {
-      font-size: 14px; /* Increase font size */
-      color: #666;
-      text-align: left; /* Left align the caption */
-      margin-top: 5px;
-      margin-bottom: 20px; /* Add gap below image caption */
+      text-align: center;
     }
 
     .article-text {
@@ -181,39 +96,6 @@
       line-height: 1.5;
       color: #333;
       margin-bottom: 20px;
-    }
-
-    .sources {
-      border-top: 1px solid #ccc;
-      padding-top: 10px;
-      margin-top: 20px;
-      font-size: 12px;
-    }
-
-    .sources p {
-      margin-bottom: 5px;
-      font-weight: bold;
-    }
-
-    .sources ul {
-      list-style-type: none;
-      padding: 0;
-      columns: 2; /* Split list into two columns */
-    }
-
-    .sources li {
-      margin-bottom: 5px;
-    }
-
-    .sources li::before {
-      content: '•';
-      color: #FFC107; /* Colored bullets for the source lists */
-      margin-right: 5px;
-    }
-
-    .sources a {
-      text-decoration: none;
-      color: #0077b5;
     }
 
     .additional-info {
@@ -260,6 +142,31 @@
       background: #FFC107;
       width: 0;
     }
+
+    .article-preview {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .article-preview a {
+      text-decoration: none;
+      color: #0077b5;
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .article-preview img {
+      width: 100%;
+      height: auto;
+      border: 2px solid #FFC107;
+    }
+
+    .article-preview .description {
+      font-size: 14px;
+      color: #555;
+    }
   </style>
 </head>
 <body>
@@ -285,81 +192,31 @@
     </div>
 
     <main class="article-content">
-      <div class="teaser">
-        This is a short teaser description to let the reader know what will happen in the article.
-      </div>
-      <h1 class="article-title">Title</h1>
-      <div class="article-image">
-        <img src="image.jpg" alt="Article Image">
-      </div>
-      <div class="image-caption">Image Caption</div>
-      <div class="article-meta">
-        <div class="article-info yellow-line">
-          <div>
-            <div class="author">By <span>Author Name</span></div>
-            <div class="date"><span>Publication Date</span></div>
-          </div>
-        </div>
-        <div class="social-media" style="margin-left: auto;">
-          <a href="#" class="social-icon" id="facebook-share">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/2023_Facebook_icon.svg" alt="Facebook">
-          </a>
-          <a href="#" class="social-icon" id="twitter-share">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/X_logo_2023_original.svg" alt="Twitter">
-          </a>
-          <a href="#" class="social-icon" id="copy-link">
-            <img src="https://cdn-icons-png.flaticon.com/512/10016/10016986.png" alt="Copy Link">
-          </a>
-        </div>
-      </div>
+      <h1 class="article-title">Welcome to The Public Journal</h1>
       <div class="article-text">
-        <p>Paragraph 1</p>
+        <p>The Public Journal is a valuable resource created by Populi Advocatio. All articles are meticulously authored, edited, and maintained by our dedicated team. Here you will find a wealth of knowledge and insights on various topics.</p>
       </div>
-      <div class="article-image">
-        <img src="image2.jpg" alt="Article Image 2">
+      <div class="article-preview">
+        <a href="#">Example Article 1</a>
+        <img src="https://via.placeholder.com/600x400" alt="Example Article 1">
+        <div class="description">This is a brief description of Example Article 1.</div>
       </div>
-      <div class="image-caption">Image Caption 2</div>
-      <div class="article-text">
-        <p>Paragraph 2</p>
+      <div class="article-preview">
+        <a href="#">Example Article 2</a>
+        <img src="https://via.placeholder.com/600x400" alt="Example Article 2">
+        <div class="description">This is a brief description of Example Article 2.</div>
+      </div>
+      <div class="article-preview">
+        <a href="#">Example Article 3</a>
+        <img src="https://via.placeholder.com/600x400" alt="Example Article 3">
+        <div class="description">This is a brief description of Example Article 3.</div>
       </div>
     </main>
-
-    <div class="sources">
-      <p>We only use top sources for our information. Here are our sources:</p>
-      <ul>
-        <li>Reuters</li>
-        <li>ProPublica</li>
-        <li>Associated Press (AP)</li>
-        <li>Christian Science Monitor</li>
-        <li>DW (Deutsche Welle)</li>
-        <li>Bloomberg</li>
-        <li>The Globe and Mail (Canada)</li>
-        <li>The Irish Times</li>
-        <li>NPR (National Public Radio)</li>
-        <li>Al Jazeera</li>
-      </ul>
-      <p>Here are our sources for media:</p>
-      <ul>
-        <li>Pixabay</li>
-        <li>Unsplash</li>
-        <li>Pexels</li>
-        <li>Wikimedia Commons</li>
-        <li>Flickr (Creative Commons)</li>
-        <li>StockSnap.io</li>
-        <li>Coverr</li>
-        <li>Freepik</li>
-        <li>Burst (by Shopify)</li>
-        <li>Life of Pix</li>
-      </ul>
-    </div>
-
-    <div class="additional-info">
-      <p>The Public Journal is a valuable resource created by Populi Advocatio. All articles are meticulously authored, edited, and maintained by our dedicated team. Be sure to visit our official site for additional projects, resources, job opportunities, and more: <a href="http://apgo.ink" target="_blank">apgo.ink</a></p>
-    </div>
 
     <div class="footer">
       <div>© Populi Advocatio</div>
       <div><img src="https://i.ibb.co/LtzW7Bs/24c7b56c3a58c5de1ce96db8ec71599b.png" alt="Populi Advocatio Logo" class="populi-logo"></div>
+      <div><a href="terms-of-service.html" target="_blank">Terms of Service</a></div>
       <div>Design inspired by Al Jazeera</div>
     </div>
   </div>
@@ -385,30 +242,6 @@
       const scrolled = (winScroll / height) * 100;
       document.getElementById('progress-bar').style.width = scrolled + "%";
     };
-
-    // Share buttons functionality
-    document.getElementById('facebook-share').addEventListener('click', function(e) {
-      e.preventDefault();
-      const url = window.location.href;
-      const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
-      window.open(facebookUrl, '_blank');
-    });
-
-    document.getElementById('twitter-share').addEventListener('click', function(e) {
-      e.preventDefault();
-      const url = window.location.href;
-      const text = document.querySelector('.article-title').textContent;
-      const twitterUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(text)}`;
-      window.open(twitterUrl, '_blank');
-    });
-
-    document.getElementById('copy-link').addEventListener('click', function(e) {
-      e.preventDefault();
-      const url = window.location.href;
-      navigator.clipboard.writeText(url).then(() => {
-        alert('Link copied to clipboard');
-      });
-    });
   </script>
 </body>
 </html>
