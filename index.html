@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Public Journal</title>
+  <title>Public Journal - Home</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -14,13 +14,14 @@
       background-color: #f8f9fa; /* Light grey background to mimic newspaper look */
     }
 
-    .article-container {
-      max-width: 600px; /* Reduced maximum width for the article container */
+    .container {
+      max-width: 800px; /* Maximum width for the container */
       margin: 40px auto; /* Center the container and add vertical spacing */
       padding: 20px;
-      background-color: #fff; /* White background for the article */
+      background-color: #fff; /* White background for the container */
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
       position: relative;
+      text-align: center;
     }
 
     .header {
@@ -49,46 +50,18 @@
       left: -25%; /* Adjust to center the line under the logo */
     }
 
-    .teaser {
-      font-family: 'Georgia', serif;
-      font-style: italic;
-      margin: 20px 0;
-      font-size: 16px;
-      color: #555;
-      text-align: center; /* Center-align the teaser description */
-    }
-
-    .article-title {
-      font-size: 32px; /* Larger font size for the headline */
-      margin-bottom: 10px;
-      color: #333;
-      text-align: center; /* Center-align the title */
-    }
-
-    .article-text {
-      font-size: 16px;
-      line-height: 1.5;
+    .content {
+      font-size: 18px;
       color: #333;
       margin-bottom: 20px;
-      text-align: center; /* Center-align the text */
     }
 
-    .article-links {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .article-links a {
-      font-size: 18px;
+    .link {
+      font-size: 16px;
       color: #0077b5;
       text-decoration: none;
-      margin: 10px 0;
-      transition: color 0.3s;
-    }
-
-    .article-links a:hover {
-      color: #0056a3;
+      margin-top: 20px;
+      display: inline-block;
     }
 
     .footer {
@@ -109,30 +82,18 @@
   </style>
 </head>
 <body>
-  <div class="article-container">
+  <div class="container">
     <div class="header">
       <div class="logo">
-        <a href="https://ibb.co/wySZYp6">
-          <img src="https://i.ibb.co/cJ6Kx2T/1a4d405f1049c87175d09c2300e239fb.png" alt="Journal Logo">
-        </a>
+        <img src="https://i.ibb.co/cJ6Kx2T/1a4d405f1049c87175d09c2300e239fb.png" alt="Journal Logo">
       </div>
     </div>
 
-    <main class="article-content">
-      <div class="teaser">
-        Welcome to the Public Journal
-      </div>
-      <h1 class="article-title">Your Source for Reliable News and Articles</h1>
-      <div class="article-text">
-        <p>Welcome to the Public Journal, a valuable resource created by Populi Advocatio. Here, you will find meticulously authored, edited, and maintained articles on a variety of topics. We aim to provide you with the most accurate and up-to-date information.</p>
-      </div>
-
-      <div class="article-links">
-        <a href="article1.html">Read Article 1</a>
-        <a href="article2.html">Read Article 2</a>
-        <a href="article3.html">Read Article 3</a>
-      </div>
-    </main>
+    <div class="content">
+      <h1>Welcome to the Public Journal</h1>
+      <p>Your source for insightful articles and in-depth analyses. Explore our latest content and stay informed.</p>
+      <a href="tos.html" class="link">Terms of Service</a>
+    </div>
 
     <div class="footer">
       <div>© Populi Advocatio</div>
