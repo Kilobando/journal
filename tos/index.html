@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333; /* Very dark grey for all text */
+      transition: background-color 0.3s, color 0.3s;
+      background-color: #f8f9fa; /* Light grey background to mimic newspaper look */
+    }
+
+    .article-container {
+      max-width: 600px; /* Reduced maximum width for the article container */
+      margin: 40px auto; /* Center the container and add vertical spacing */
+      padding: 20px;
+      background-color: #fff; /* White background for the article */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+      position: relative;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .logo img {
+      width: 350px; /* Make the journal logo larger */
+    }
+
+    .logo {
+      position: relative;
+      display: inline-block;
+    }
+
+    .logo::after {
+      content: '';
+      display: block;
+      width: 150%; /* Extend the underline further to the left and right */
+      height: 3px;
+      background-color: #FFC107;
+      position: absolute;
+      bottom: -10px; /* Adjust this value for spacing */
+      left: -25%; /* Adjust to center the line under the logo */
+    }
+
+    .article-title {
+      font-size: 32px; /* Larger font size for the headline */
+      margin-bottom: 10px;
+      color: #333;
+      text-align: center;
+    }
+
+    .article-text {
+      font-size: 16px;
+      line-height: 1.5;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .additional-info {
+      border-top: 1px solid #ccc;
+      padding-top: 10px;
+      margin-top: 20px;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .additional-info a {
+      text-decoration: none;
+      color: #0077b5;
+    }
+
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 20px;
+      font-size: 12px;
+      color: #666;
+      border-top: 1px solid #ccc;
+      padding-top: 10px;
+    }
+
+    .populi-logo {
+      width: 100px;
+      height: auto;
+    }
+
+    .progress-container {
+      width: 100%;
+      height: 5px;
+      background: #ccc;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
+
+    .progress-bar {
+      height: 5px;
+      background: #FFC107;
+      width: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="progress-container">
+    <div class="progress-bar" id="progress-bar"></div>
+  </div>
+  <div class="article-container">
+    <div class="header">
+      <div class="logo">
+        <img src="https://i.ibb.co/cJ6Kx2T/1a4d405f1049c87175d09c2300e239fb.png" alt="Journal Logo">
+      </div>
+    </div>
+
+    <main class="article-content">
+      <h1 class="article-title">Terms of Service</h1>
+      <div class="article-text">
+        <p>Welcome to The Public Journal. By accessing and using our content, you agree to comply with the following terms and conditions:</p>
+        <h2>1. Use of Content</h2>
+        <p>You are free to copy, distribute, and display our articles and content, provided you give appropriate credit to Populi Advocatio. You may not use the material for commercial purposes.</p>
+        <h2>2. Attribution</h2>
+        <p>When using our content, you must give proper attribution to Populi Advocatio and the original authors. This includes linking back to the original article on our site where applicable.</p>
+        <h2>3. Media and Images</h2>
+        <p>We use images and media from various sources. Proper credit must be given to the original sources as specified in the image captions or media descriptions.</p>
+        <h2>4. Restrictions</h2>
+        <p>You are not allowed to:
+          <ul>
+            <li>Use our content for any unlawful purpose</li>
+            <li>Claim our content as your own</li>
+            <li>Modify the content in a way that misrepresents the original meaning</li>
+          </ul>
+        </p>
+        <h2>5. Disclaimer</h2>
+        <p>All content provided is for informational purposes only. Populi Advocatio makes no representations as to the accuracy or completeness of any information on this site or found by following any link on this site.</p>
+      </div>
+    </main>
+
+    <div class="additional-info">
+      <p>The Public Journal is a valuable resource created by Populi Advocatio. All articles are meticulously authored, edited, and maintained by our dedicated team. Be sure to visit our official site for additional projects, resources, job opportunities, and more: <a href="http://apgo.ink" target="_blank">apgo.ink</a></p>
+    </div>
+
+    <div class="footer">
+      <div>© Populi Advocatio</div>
+      <div><img src="https://i.ibb.co/LtzW7Bs/24c7b56c3a58c5de1ce96db8ec71599b.png" alt="Populi Advocatio Logo" class="populi-logo"></div>
+      <div>Design inspired by Al Jazeera</div>
+    </div>
+  </div>
+</body>
+</html>
