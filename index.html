@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Public Journal - Home</title>
+  <title>Public Journal</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -15,13 +15,13 @@
     }
 
     .container {
-      max-width: 800px; /* Maximum width for the container */
+      max-width: 800px; /* Maximum width for the main container */
       margin: 40px auto; /* Center the container and add vertical spacing */
       padding: 20px;
       background-color: #fff; /* White background for the container */
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
       position: relative;
-      text-align: center;
+      text-align: center; /* Center-align text */
     }
 
     .header {
@@ -50,18 +50,31 @@
       left: -25%; /* Adjust to center the line under the logo */
     }
 
-    .content {
-      font-size: 18px;
+    .welcome {
+      font-size: 24px;
+      margin-bottom: 10px;
       color: #333;
+    }
+
+    .description {
+      font-size: 18px;
+      margin-bottom: 20px;
+      color: #555;
+    }
+
+    .article-list {
+      text-align: left;
       margin-bottom: 20px;
     }
 
-    .link {
-      font-size: 16px;
-      color: #0077b5;
+    .article-item {
+      margin-bottom: 15px;
+    }
+
+    .article-item a {
       text-decoration: none;
-      margin-top: 20px;
-      display: inline-block;
+      color: #0077b5;
+      font-weight: bold;
     }
 
     .footer {
@@ -79,6 +92,12 @@
       width: 100px;
       height: auto;
     }
+
+    .footer a {
+      text-decoration: none;
+      color: #0077b5;
+      margin-left: 10px;
+    }
   </style>
 </head>
 <body>
@@ -89,16 +108,26 @@
       </div>
     </div>
 
-    <div class="content">
-      <h1>Welcome to the Public Journal</h1>
-      <p>Your source for insightful articles and in-depth analyses. Explore our latest content and stay informed.</p>
-      <a href="tos.html" class="link">Terms of Service</a>
+    <div class="welcome">
+      Welcome to the Public Journal
+    </div>
+    <div class="description">
+      Explore insightful articles, in-depth analyses, and the latest updates from our team of experts at Populi Advocatio.
+    </div>
+
+    <div class="article-list">
+      <div class="article-item"><a href="#">Article Title 1</a></div>
+      <div class="article-item"><a href="#">Article Title 2</a></div>
+      <div class="article-item"><a href="#">Article Title 3</a></div>
+      <div class="article-item"><a href="#">Article Title 4</a></div>
+      <div class="article-item"><a href="#">Article Title 5</a></div>
     </div>
 
     <div class="footer">
       <div>© Populi Advocatio</div>
       <div><img src="https://i.ibb.co/LtzW7Bs/24c7b56c3a58c5de1ce96db8ec71599b.png" alt="Populi Advocatio Logo" class="populi-logo"></div>
       <div>Design inspired by Al Jazeera</div>
+      <div><a href="tos">Terms of Service</a></div>
     </div>
   </div>
 </body>
