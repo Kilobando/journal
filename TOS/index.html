@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333; /* Very dark grey for all text */
+      transition: background-color 0.3s, color 0.3s;
+      background-color: #f8f9fa; /* Light grey background to mimic newspaper look */
+    }
+
+    .article-container {
+      max-width: 600px; /* Reduced maximum width for the article container */
+      margin: 40px auto; /* Center the container and add vertical spacing */
+      padding: 20px;
+      background-color: #fff; /* White background for the article */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+      position: relative;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .logo img {
+      width: 350px; /* Make the journal logo larger */
+    }
+
+    .logo {
+      position: relative;
+      display: inline-block;
+    }
+
+    .logo::after {
+      content: '';
+      display: block;
+      width: 150%; /* Extend the underline further to the left and right */
+      height: 3px;
+      background-color: #FFC107;
+      position: absolute;
+      bottom: -10px; /* Adjust this value for spacing */
+      left: -25%; /* Adjust to center the line under the logo */
+    }
+
+    .tos-content {
+      margin-bottom: 40px;
+    }
+
+    .tos-title {
+      font-size: 32px; /* Larger font size for the headline */
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .tos-section {
+      font-size: 16px;
+      line-height: 1.5;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .yellow-line {
+      border-left: 3px solid #FFC107;
+      padding-left: 10px;
+    }
+
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 20px;
+      font-size: 12px;
+      color: #666;
+      border-top: 1px solid #ccc;
+      padding-top: 10px;
+    }
+
+    .populi-logo {
+      width: 100px;
+      height: auto;
+    }
+
+    .progress-container {
+      width: 100%;
+      height: 5px;
+      background: #ccc;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
+
+    .progress-bar {
+      height: 5px;
+      background: #FFC107;
+      width: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="progress-container">
+    <div class="progress-bar" id="progress-bar"></div>
+  </div>
+  <div class="article-container">
+    <div class="header">
+      <div class="logo">
+        <a href="https://ibb.co/wySZYp6">
+          <img src="https://i.ibb.co/cJ6Kx2T/1a4d405f1049c87175d09c2300e239fb.png" alt="Journal Logo">
+        </a>
+      </div>
+    </div>
+
+    <main class="tos-content">
+      <h1 class="tos-title">Terms of Service</h1>
+      <div class="tos-section yellow-line">
+        <h2>Introduction</h2>
+        <p>Welcome to The Public Journal, a resource created by Populi Advocatio. By accessing or using our website, you agree to comply with and be bound by the following terms and conditions.</p>
+      </div>
+      <div class="tos-section yellow-line">
+        <h2>Use of Content</h2>
+        <p>Our content is open and free to use under the following conditions:</p>
+        <ul>
+          <li>You may copy, distribute, and display the articles, provided you credit Populi Advocatio as the source.</li>
+          <li>Do not use our content for commercial purposes without obtaining prior written permission from us.</li>
+          <li>Ensure that any third-party media (images, videos, etc.) used in our articles are credited accordingly.</li>
+        </ul>
+      </div>
+      <div class="tos-section yellow-line">
+        <h2>Prohibited Actions</h2>
+        <p>You agree not to engage in any of the following activities:</p>
+        <ul>
+          <li>Using the content for illegal purposes.</li>
+          <li>Modifying the content in a way that misrepresents the original material or its source.</li>
+          <li>Removing any copyright or other proprietary notations from the materials.</li>
+        </ul>
+      </div>
+      <div class="tos-section yellow-line">
+        <h2>Third-Party Media</h2>
+        <p>We use images, videos, and other media from third-party sources. It is mandatory to credit these sources as specified in our articles. Failure to do so may result in legal action from the original content owners.</p>
+      </div>
+      <div class="tos-section yellow-line">
+        <h2>Limitation of Liability</h2>
+        <p>Populi Advocatio is not liable for any damages arising from the use of our website or the information provided, whether direct, indirect, incidental, or consequential.</p>
+      </div>
+      <div class="tos-section yellow-line">
+        <h2>Changes to Terms</h2>
+        <p>We reserve the right to update these terms at any time without prior notice. Your continued use of the website constitutes acceptance of the new terms.</p>
+      </div>
+    </main>
+
+    <div class="footer">
+      <div>© Populi Advocatio</div>
+      <div><img src="https://i.ibb.co/LtzW7Bs/24c7b56c3a58c5de1ce96db8ec71599b.png" alt="Populi Advocatio Logo" class="populi-logo"></div>
+      <div>Design inspired by Al Jazeera</div>
+    </div>
+  </div>
+
+  <div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <div class="lightbox-content">
+      <img id="lightbox-img" src="" alt="Lightbox Image">
+    </div>
+    <a class="prev">&#10094;"></a>
+    <a class="next">&#10095;"></a>
+  </div>
+
+  <div class="context-menu" id="context-menu">
+    <button class="c" onclick="highlightText()">C</button>
+    <button class="r" onclick="resetFormatting()">R</button>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const facebookShare = document.getElementById('facebook-share');
+      const twitterShare = document.getElementById('twitter-share');
+      const copyLink = document.getElementById('copy-link');
+      const lightboxTrigger = document.getElementById('lightbox-trigger');
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      const closeLightbox = document.querySelector('.close');
+      const prev = document.querySelector('.prev');
+      const next = document.querySelector('.next');
+      const progressBar = document.getElementById('progress-bar');
+      const contextMenu = document.getElementById('context-menu');
+
+      const images = ["image2.jpg", "image3.jpg", "image4.jpg"];
+      let currentImageIndex = 0;
+
+      // Share buttons functionality
+      facebookShare.addEventListener('click', function(e) {
+        e.preventDefault();
+        const url = window.location.href;
+        const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
+        window.open(facebookUrl, '_blank');
+      });
+
+      twitterShare.addEventListener('click', function(e) {
+        e.preventDefault();
+        const url = window.location.href;
+        const text = document.querySelector('.article-title').textContent;
+        const twitterUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(text)}`;
+        window.open(twitterUrl, '_blank');
+      });
+
+      copyLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        const url = window.location.href;
+        navigator.clipboard.writeText(url).then(() => {
+          alert('Link copied to clipboard');
+        });
+      });
+
+      // Reading progress bar
+      window.onscroll = function() {
+        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (winScroll / height) * 100;
+        progressBar.style.width = scrolled + "%";
+      };
+
+      // Lightbox functionality
+      lightboxTrigger.addEventListener('click', function() {
+        lightbox.style.display = "block";
+        lightboxImg.src = images[currentImageIndex];
+      });
+
+      closeLightbox.addEventListener('click', function() {
+        lightbox.style.display = "none";
+      });
+
+      prev.addEventListener('click', function() {
+        currentImageIndex = (currentImageIndex === 0) ? images.length - 1 : currentImageIndex - 1;
+        lightboxImg.src = images[currentImageIndex];
+      });
+
+      next.addEventListener('click', function() {
+        currentImageIndex = (currentImageIndex === images.length - 1) ? 0 : currentImageIndex + 1;
+        lightboxImg.src = images[currentImageIndex];
+      });
+
+      window.addEventListener('click', function(event) {
+        if (event.target === lightbox) {
+          lightbox.style.display = "none";
+        }
+      });
+
+      // Context menu functionality
+      document.addEventListener('mouseup', function(event) {
+        const selection = window.getSelection();
+        if (selection.toString().length > 0) {
+          const { clientY: mouseY } = event;
+          const range = selection.getRangeAt(0);
+          const rect = range.getBoundingClientRect();
+          contextMenu.style.top = `${rect.bottom + window.scrollY}px`;
+          contextMenu.style.left = `${rect.left + window.scrollX}px`;
+          contextMenu.style.display = 'block';
+        } else {
+          contextMenu.style.display = 'none';
+        }
+      });
+
+      document.addEventListener('click', function(event) {
+        if (!contextMenu.contains(event.target) && !window.getSelection().toString()) {
+          contextMenu.style.display = 'none';
+        }
+      });
+    });
+
+    function highlightText() {
+      const selection = window.getSelection();
+      if (selection.rangeCount) {
+        const range = selection.getRangeAt(0);
+        const span = document.createElement('span');
+        span.className = 'highlight';
+        range.surroundContents(span);
+        window.getSelection().removeAllRanges();
+        document.getElementById('context-menu').style.display = 'none';
+      }
+    }
+
+    function resetFormatting() {
+      const selection = window.getSelection();
+      if (selection.rangeCount) {
+        const range = selection.getRangeAt(0);
+        const contents = range.extractContents();
+        const spans = contents.querySelectorAll('.highlight');
+        spans.forEach(span => {
+          while (span.firstChild) {
+            span.parentNode.insertBefore(span.firstChild, span);
+          }
+          span.remove();
+        });
+        range.insertNode(contents);
+        window.getSelection().removeAllRanges();
+      }
+      document.getElementById('context-menu').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
