@@ -10,17 +10,52 @@
       margin: 0;
       padding: 0;
       color: #333; /* Very dark grey for all text */
-      transition: background-color 0.3s, color 0.3s;
       background-color: #f8f9fa; /* Light grey background to mimic newspaper look */
+      overflow-x: hidden;
+    }
+
+    .background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .background img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      position: absolute;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .background img.active {
+      opacity: 0.3; /* Darkened effect */
+    }
+
+    .background .source {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      font-size: 12px;
+      color: #fff;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 2px 5px;
+      border-radius: 3px;
     }
 
     .article-container {
       max-width: 600px; /* Reduced maximum width for the article container */
       margin: 40px auto; /* Center the container and add vertical spacing */
       padding: 20px;
-      background-color: #fff; /* White background for the article */
+      background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white background for the article */
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
       position: relative;
+      z-index: 1;
     }
 
     .header {
@@ -113,6 +148,15 @@
   <div class="progress-container">
     <div class="progress-bar" id="progress-bar"></div>
   </div>
+  <div class="background">
+    <img src="https://images.unsplash.com/photo-1660479644038-cceebdaa6bdf?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="active" alt="Background Image 1" data-source="Source: Unsplash">
+    <img src="https://images.unsplash.com/photo-1473260079709-83c808703435?q=80&w=1920&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Background Image 2" data-source="Source: Unsplash">
+    <img src="https://images.unsplash.com/photo-1607799279861-4dd421887fb3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Background Image 3" data-source="Source: Unsplash">
+    <img src="https://images.unsplash.com/photo-1516704135885-dc4c68a189e3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Background Image 4" data-source="Source: Unsplash">
+    <img src="https://images.unsplash.com/photo-1530379768560-fac46435511d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Background Image 5" data-source="Source: Unsplash">
+    <img src="https://images.unsplash.com/photo-1470075446540-4391a96ec621?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Background Image 6" data-source="Source: Unsplash">
+    <div class="source" id="image-source">Source: Unsplash</div>
+  </div>
   <div class="article-container">
     <div class="header">
       <div class="logo">
@@ -155,5 +199,28 @@
       <div>Design inspired by Al Jazeera</div>
     </div>
   </div>
+
+  <script>
+    const images = document.querySelectorAll('.background img');
+    const sourceText = document.getElementById('image-source');
+    let currentImageIndex = 0;
+
+    function showNextImage() {
+      images[currentImageIndex].classList.remove('active');
+      currentImageIndex = (currentImageIndex + 1) % images.length;
+      images[currentImageIndex].classList.add('active');
+      sourceText.textContent = images[currentImageIndex].getAttribute('data-source');
+    }
+
+    setInterval(showNextImage, 3000);
+
+    // Reading progress bar
+    window.onscroll = function() {
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      document.getElementById('progress-bar').style.width = scrolled + "%";
+    };
+  </script>
 </body>
 </html>
